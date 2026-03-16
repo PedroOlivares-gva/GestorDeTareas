@@ -40,6 +40,8 @@
             button_eliminar = new Button();
             listBox_tareas = new ListBox();
             button_PrioridadAlta = new Button();
+            label_tipo = new Label();
+            comboBox_tipo = new ComboBox();
             SuspendLayout();
             // 
             // label_nombre
@@ -74,13 +76,13 @@
             textBox_descripcion.Location = new Point(123, 135);
             textBox_descripcion.Multiline = true;
             textBox_descripcion.Name = "textBox_descripcion";
-            textBox_descripcion.Size = new Size(284, 123);
+            textBox_descripcion.Size = new Size(284, 84);
             textBox_descripcion.TabIndex = 2;
             // 
             // label_fecha
             // 
             label_fecha.AutoSize = true;
-            label_fecha.Location = new Point(123, 270);
+            label_fecha.Location = new Point(123, 335);
             label_fecha.Name = "label_fecha";
             label_fecha.Size = new Size(50, 20);
             label_fecha.TabIndex = 4;
@@ -97,7 +99,7 @@
             // 
             // dateTimePicker_fecha
             // 
-            dateTimePicker_fecha.Location = new Point(123, 293);
+            dateTimePicker_fecha.Location = new Point(123, 358);
             dateTimePicker_fecha.Name = "dateTimePicker_fecha";
             dateTimePicker_fecha.Size = new Size(284, 27);
             dateTimePicker_fecha.TabIndex = 4;
@@ -105,7 +107,7 @@
             // 
             // button_añadir
             // 
-            button_añadir.Location = new Point(175, 358);
+            button_añadir.Location = new Point(175, 403);
             button_añadir.Name = "button_añadir";
             button_añadir.Size = new Size(139, 44);
             button_añadir.TabIndex = 4;
@@ -152,11 +154,33 @@
             button_PrioridadAlta.UseVisualStyleBackColor = true;
             button_PrioridadAlta.Click += button_PrioridadAlta_Click;
             // 
+            // label_tipo
+            // 
+            label_tipo.AutoSize = true;
+            label_tipo.Location = new Point(123, 234);
+            label_tipo.Name = "label_tipo";
+            label_tipo.Size = new Size(101, 20);
+            label_tipo.TabIndex = 10;
+            label_tipo.Text = "Tipo de tarea:";
+            label_tipo.Click += label1_Click_1;
+            // 
+            // comboBox_tipo
+            // 
+            comboBox_tipo.FormattingEnabled = true;
+            comboBox_tipo.Items.AddRange(new object[] { "Trabajo", "Personal", "Estudios" });
+            comboBox_tipo.Location = new Point(123, 268);
+            comboBox_tipo.Name = "comboBox_tipo";
+            comboBox_tipo.Size = new Size(151, 28);
+            comboBox_tipo.TabIndex = 11;
+            comboBox_tipo.SelectedIndexChanged += comboBox_tipo_SelectedIndexChanged;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(907, 474);
+            Controls.Add(comboBox_tipo);
+            Controls.Add(label_tipo);
             Controls.Add(button_PrioridadAlta);
             Controls.Add(listBox_tareas);
             Controls.Add(button_eliminar);
@@ -190,5 +214,7 @@
         private Button button_eliminar;
         private ListBox listBox_tareas;
         private Button button_PrioridadAlta;
+        private Label label_tipo;
+        private ComboBox comboBox_tipo;
     }
 }

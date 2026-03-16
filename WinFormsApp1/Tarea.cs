@@ -19,12 +19,14 @@ namespace WinFormsApp1
         private string descripcion;
         private bool completada;
         private DateTime fecha;
+        private string tipo;
 
-        public Tarea(string titulo, string descripcion, DateTime fecha) { 
+        public Tarea(string titulo, string descripcion, DateTime fecha, string tipo) { 
         this.titulo = titulo;
         this.descripcion = descripcion;
         this.completada = false;
         this.fecha = fecha;
+        this.tipo = tipo;
         }
 
         public void MarcarCompletada()
@@ -34,7 +36,7 @@ namespace WinFormsApp1
 
         public override string ToString()
         {
-            return titulo + " | " + fecha.ToShortDateString() + " | Completada: " + completada;
+            return titulo + " | Tipo:"+tipo +" | " + fecha.ToShortDateString() + " | Completada: " + completada;
         }
 
 

@@ -19,11 +19,11 @@ namespace WinFormsApp1
             numTareas = 0;
         }
 
-        public void crearTarea(string nombre, string descripcion, DateTime fecha)
+        public void crearTarea(string nombre, string descripcion, DateTime fecha, string tipo)
         {
             if (numTareas < capacidad)
             {
-                tareas[numTareas++] = new Tarea(nombre, descripcion, fecha);
+                tareas[numTareas++] = new Tarea(nombre, descripcion, fecha, tipo);
             }
             else
             {

@@ -44,7 +44,7 @@ namespace WinFormsApp1
             String descripcion = textBox_descripcion.Text;
             DateTime fecha = dateTimePicker_fecha.Value;
 
-            gestor.crearTarea(titulo, descripcion, fecha);
+            gestor.crearTarea(titulo, descripcion, fecha, tipo);
 
             actualizarLista();
         }
@@ -101,6 +101,16 @@ namespace WinFormsApp1
 
                 actualizarLista();
             }
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox_tipo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
