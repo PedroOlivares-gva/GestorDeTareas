@@ -39,6 +39,7 @@
             button_marcar = new Button();
             button_eliminar = new Button();
             listBox_tareas = new ListBox();
+            button_PrioridadAlta = new Button();
             SuspendLayout();
             // 
             // label_nombre
@@ -114,7 +115,7 @@
             // 
             // button_marcar
             // 
-            button_marcar.Location = new Point(501, 408);
+            button_marcar.Location = new Point(472, 408);
             button_marcar.Name = "button_marcar";
             button_marcar.Size = new Size(133, 39);
             button_marcar.TabIndex = 6;
@@ -124,7 +125,7 @@
             // 
             // button_eliminar
             // 
-            button_eliminar.Location = new Point(714, 408);
+            button_eliminar.Location = new Point(611, 408);
             button_eliminar.Name = "button_eliminar";
             button_eliminar.Size = new Size(133, 39);
             button_eliminar.TabIndex = 7;
@@ -141,11 +142,22 @@
             listBox_tareas.Size = new Size(375, 324);
             listBox_tareas.TabIndex = 8;
             // 
+            // button_PrioridadAlta
+            // 
+            button_PrioridadAlta.Location = new Point(750, 408);
+            button_PrioridadAlta.Name = "button_PrioridadAlta";
+            button_PrioridadAlta.Size = new Size(109, 42);
+            button_PrioridadAlta.TabIndex = 9;
+            button_PrioridadAlta.Text = "Prioridad Alta";
+            button_PrioridadAlta.UseVisualStyleBackColor = true;
+            button_PrioridadAlta.Click += button_PrioridadAlta_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(907, 474);
+            Controls.Add(button_PrioridadAlta);
             Controls.Add(listBox_tareas);
             Controls.Add(button_eliminar);
             Controls.Add(button_marcar);
@@ -177,5 +189,6 @@
         private Button button_marcar;
         private Button button_eliminar;
         private ListBox listBox_tareas;
+        private Button button_PrioridadAlta;
     }
 }

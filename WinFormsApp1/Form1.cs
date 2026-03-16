@@ -20,7 +20,7 @@ namespace WinFormsApp1
                     listBox_tareas.Items.Add(tareas[i]);
             }
 
-            
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -88,6 +88,18 @@ namespace WinFormsApp1
             else
             {
                 MessageBox.Show("Selecciona una tarea");
+            }
+        }
+
+        private void button_PrioridadAlta_Click(object sender, EventArgs e)
+        {
+            if (listBox_tareas.SelectedItem != null)
+            {
+                Tarea tareaSeleccionada = (Tarea)listBox_tareas.SelectedItem;
+
+                gestor.MarcarPrioridadAlta(tareaSeleccionada.GetTitulo());
+
+                actualizarLista();
             }
         }
     }

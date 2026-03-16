@@ -75,7 +75,31 @@ namespace WinFormsApp1
             MessageBox.Show("No se encontró la tarea");
         }
 
+
+
+        public void MarcarPrioridadAlta(string nombre)
+        {
+            for (int i = 0; i < numTareas; i++)
+            {
+                if (tareas[i].GetTitulo().Equals(nombre))
+                {
+                    Tarea primera = tareas[i];
+
+                    for (int j = i; j > 0; j--)
+                    {
+                        tareas[j] = tareas[j - 1];
+                    }
+
+                    tareas[0] = primera;
+
+                    return;
+                }
+            }
+        }
+
     }
+
+    
 
         
 
