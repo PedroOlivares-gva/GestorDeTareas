@@ -42,6 +42,8 @@
             button_PrioridadAlta = new Button();
             label_tipo = new Label();
             comboBox_tipo = new ComboBox();
+            label_textoContador = new Label();
+            label_contadorTareas = new Label();
             SuspendLayout();
             // 
             // label_nombre
@@ -174,11 +176,33 @@
             comboBox_tipo.TabIndex = 11;
             comboBox_tipo.SelectedIndexChanged += comboBox_tipo_SelectedIndexChanged;
             // 
+            // label_textoContador
+            // 
+            label_textoContador.AutoSize = true;
+            label_textoContador.Location = new Point(472, 20);
+            label_textoContador.Name = "label_textoContador";
+            label_textoContador.Size = new Size(74, 20);
+            label_textoContador.TabIndex = 12;
+            label_textoContador.Text = "Contador:";
+            label_textoContador.Click += label1_Click_2;
+            // 
+            // label_contadorTareas
+            // 
+            label_contadorTareas.AutoSize = true;
+            label_contadorTareas.Location = new Point(543, 20);
+            label_contadorTareas.Name = "label_contadorTareas";
+            label_contadorTareas.Size = new Size(17, 20);
+            label_contadorTareas.TabIndex = 13;
+            label_contadorTareas.Text = "0";
+            label_contadorTareas.Click += label_contadorTareas_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(907, 474);
+            Controls.Add(label_contadorTareas);
+            Controls.Add(label_textoContador);
             Controls.Add(comboBox_tipo);
             Controls.Add(label_tipo);
             Controls.Add(button_PrioridadAlta);
@@ -216,5 +240,7 @@
         private Button button_PrioridadAlta;
         private Label label_tipo;
         private ComboBox comboBox_tipo;
+        private Label label_textoContador;
+        private Label label_contadorTareas;
     }
 }

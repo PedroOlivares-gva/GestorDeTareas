@@ -23,6 +23,11 @@ namespace WinFormsApp1
 
         }
 
+        private void actualizarContador()
+        {
+            label_contadorTareas.Text = gestor.getNumTareas().ToString();
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -43,10 +48,12 @@ namespace WinFormsApp1
             string titulo = textBox_nombre.Text;
             String descripcion = textBox_descripcion.Text;
             DateTime fecha = dateTimePicker_fecha.Value;
+            String tipo = comboBox_tipo.SelectedItem.ToString();
 
             gestor.crearTarea(titulo, descripcion, fecha, tipo);
 
             actualizarLista();
+            actualizarContador();
         }
 
         private void dateTimePicker_fecha_ValueChanged(object sender, EventArgs e)
@@ -84,6 +91,7 @@ namespace WinFormsApp1
                 gestor.eliminarTarea(tareaSeleccionada.GetTitulo());
 
                 actualizarLista();
+                actualizarContador();
             }
             else
             {
@@ -109,6 +117,16 @@ namespace WinFormsApp1
         }
 
         private void comboBox_tipo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label_contadorTareas_Click(object sender, EventArgs e)
         {
 
         }
