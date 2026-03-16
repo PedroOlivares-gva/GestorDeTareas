@@ -44,6 +44,7 @@
             comboBox_tipo = new ComboBox();
             label_textoContador = new Label();
             label_contadorTareas = new Label();
+            button_limpiar = new Button();
             SuspendLayout();
             // 
             // label_nombre
@@ -95,7 +96,7 @@
             toolStrip1.ImageScalingSize = new Size(20, 20);
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new Size(907, 25);
+            toolStrip1.Size = new Size(938, 25);
             toolStrip1.TabIndex = 5;
             toolStrip1.Text = "toolStrip1";
             // 
@@ -119,7 +120,7 @@
             // 
             // button_marcar
             // 
-            button_marcar.Location = new Point(472, 408);
+            button_marcar.Location = new Point(413, 408);
             button_marcar.Name = "button_marcar";
             button_marcar.Size = new Size(133, 39);
             button_marcar.TabIndex = 6;
@@ -129,7 +130,7 @@
             // 
             // button_eliminar
             // 
-            button_eliminar.Location = new Point(611, 408);
+            button_eliminar.Location = new Point(552, 406);
             button_eliminar.Name = "button_eliminar";
             button_eliminar.Size = new Size(133, 39);
             button_eliminar.TabIndex = 7;
@@ -148,7 +149,7 @@
             // 
             // button_PrioridadAlta
             // 
-            button_PrioridadAlta.Location = new Point(750, 408);
+            button_PrioridadAlta.Location = new Point(691, 405);
             button_PrioridadAlta.Name = "button_PrioridadAlta";
             button_PrioridadAlta.Size = new Size(109, 42);
             button_PrioridadAlta.TabIndex = 9;
@@ -196,11 +197,22 @@
             label_contadorTareas.Text = "0";
             label_contadorTareas.Click += label_contadorTareas_Click;
             // 
+            // button_limpiar
+            // 
+            button_limpiar.Location = new Point(801, 405);
+            button_limpiar.Name = "button_limpiar";
+            button_limpiar.Size = new Size(125, 42);
+            button_limpiar.TabIndex = 14;
+            button_limpiar.Text = "Limpiar campos";
+            button_limpiar.UseVisualStyleBackColor = true;
+            button_limpiar.Click += button_limpiar_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(907, 474);
+            ClientSize = new Size(938, 474);
+            Controls.Add(button_limpiar);
             Controls.Add(label_contadorTareas);
             Controls.Add(label_textoContador);
             Controls.Add(comboBox_tipo);
@@ -242,5 +254,6 @@
         private ComboBox comboBox_tipo;
         private Label label_textoContador;
         private Label label_contadorTareas;
+        private Button button_limpiar;
     }
 }

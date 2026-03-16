@@ -130,5 +130,14 @@ namespace WinFormsApp1
         {
 
         }
+
+        private void button_limpiar_Click(object sender, EventArgs e)
+        {
+            textBox_nombre.Clear();
+            textBox_descripcion.Clear();
+            comboBox_tipo.SelectedIndex = -1;
+            dateTimePicker_fecha.Value = DateTime.Now;
+
+        }
     }
 }
