@@ -141,7 +141,7 @@ namespace WinFormsApp1
         }
     }
 
-    // Funcionalidad de login
+    // Funcionalidad de login y registro
     Console.WriteLine("Login implementado");
-
+    Console.WriteLine("Registro implementado");
 }
