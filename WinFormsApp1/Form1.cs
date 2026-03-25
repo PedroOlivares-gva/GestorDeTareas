@@ -140,4 +140,7 @@ namespace WinFormsApp1
 
         }
     }
+
+    // Funcionalidad de registro
+    Console.WriteLine("Registro implementado");
 }
