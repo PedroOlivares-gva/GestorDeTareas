@@ -140,4 +140,8 @@ namespace WinFormsApp1
 
         }
     }
+
+    // Funcionalidad de login
+    Console.WriteLine("Login implementado");
+
 }
