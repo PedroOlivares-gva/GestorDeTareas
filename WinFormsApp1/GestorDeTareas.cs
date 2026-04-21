@@ -97,6 +97,28 @@ namespace WinFormsApp1
             }
         }
 
+
+        public void editarTarea(string tituloOriginal, string nuevoTitulo, string nuevaDescripcion, DateTime nuevaFecha, string nuevoTipo)
+        {
+            for (int i = 0; i < numTareas; i++)
+            {
+                if (tareas[i].GetTitulo().Equals(tituloOriginal))
+                {
+                    tareas[i] = new Tarea(nuevoTitulo, nuevaDescripcion, nuevaFecha, nuevoTipo);
+                    MessageBox.Show("Tarea editada");
+                    return;
+                }
+            }
+
+            MessageBox.Show("No se encontró la tarea");
+        }
+
+
+
+
+
+
+
     }
 
     

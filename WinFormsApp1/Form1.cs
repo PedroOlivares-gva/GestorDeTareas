@@ -139,9 +139,41 @@ namespace WinFormsApp1
             dateTimePicker_fecha.Value = DateTime.Now;
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button_editar_Click(object sender, EventArgs e)
+        {
+            if (listBox_tareas.SelectedItem != null)
+            {
+                Tarea tareaSeleccionada = (Tarea)listBox_tareas.SelectedItem;
+
+                string nuevoTitulo = textBox_nombre.Text;
+                string nuevaDescripcion = textBox_descripcion.Text;
+                DateTime nuevaFecha = dateTimePicker_fecha.Value;
+                string nuevoTipo = comboBox_tipo.SelectedItem.ToString();
+
+                gestor.editarTarea(
+                    tareaSeleccionada.GetTitulo(),
+                    nuevoTitulo,
+                    nuevaDescripcion,
+                    nuevaFecha,
+                    nuevoTipo
+                );
+
+                actualizarLista();
+            }
+            else
+            {
+                MessageBox.Show("Selecciona una tarea");
+            }
+        }
     }
 
     // Funcionalidad de login y registro
-    Console.WriteLine("Login implementado");
-    Console.WriteLine("Registro implementado");
+    //Console.WriteLine("Login implementado");
+    //Console.WriteLine("Registro implementado");
 }

@@ -45,6 +45,7 @@
             label_textoContador = new Label();
             label_contadorTareas = new Label();
             button_limpiar = new Button();
+            button_editar = new Button();
             SuspendLayout();
             // 
             // label_nombre
@@ -96,7 +97,7 @@
             toolStrip1.ImageScalingSize = new Size(20, 20);
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new Size(938, 25);
+            toolStrip1.Size = new Size(1085, 25);
             toolStrip1.TabIndex = 5;
             toolStrip1.Text = "toolStrip1";
             // 
@@ -207,11 +208,22 @@
             button_limpiar.UseVisualStyleBackColor = true;
             button_limpiar.Click += button_limpiar_Click;
             // 
+            // button_editar
+            // 
+            button_editar.Location = new Point(932, 408);
+            button_editar.Name = "button_editar";
+            button_editar.Size = new Size(131, 39);
+            button_editar.TabIndex = 15;
+            button_editar.Text = "Editar";
+            button_editar.UseVisualStyleBackColor = true;
+            button_editar.Click += button_editar_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(938, 474);
+            ClientSize = new Size(1085, 474);
+            Controls.Add(button_editar);
             Controls.Add(button_limpiar);
             Controls.Add(label_contadorTareas);
             Controls.Add(label_textoContador);
@@ -255,5 +267,6 @@
         private Label label_textoContador;
         private Label label_contadorTareas;
         private Button button_limpiar;
+        private Button button_editar;
     }
 }
