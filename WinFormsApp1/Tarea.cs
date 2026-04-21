@@ -40,6 +40,9 @@ namespace WinFormsApp1
         }
 
 
-
+        
+        public string Descripcion { get; set; }
+        public List<string> Etiquetas { get; set; } = new List<string>(); // Nueva propiedad
+        
     }
 }
